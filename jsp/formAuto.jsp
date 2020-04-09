@@ -1,12 +1,11 @@
 
-<%@page import="model.Auto"%>
-
 <%
 	Auto a = (Auto) request.getAttribute("auto");
 %>	
+		
 
  <div class="container registra">
-    <form method="get">
+    <form method="post">
         <input type="hidden" name="id" value="<%=a != null ? a.getIdAuto() : "" %>">
        	      
         <div class="form-group">
@@ -36,11 +35,11 @@
           </div>
         
         <div class="form-group">
-       		<input type="radio" id="suv" name="categoria" value="suv">
+       		<input type="radio" id="suv" name="categoria" value="2">
        		<label for="male">Suv</label> &nbsp &nbsp
-       		<input type="radio" id="citycar" name="categoria" value="citycar">
+       		<input type="radio" id="citycar" name="categoria" value="1">
        		<label for="male">City car</label> &nbsp &nbsp
-       		<input type="radio" id="lusso" name="categoria" value="lusso">    
+       		<input type="radio" id="lusso" name="categoria" value="3">    
        		<label for="male">Auto di lusso</label><br>   		
        	</div>
         		 
